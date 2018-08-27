@@ -13,10 +13,10 @@ from sklearn.pipeline import FeatureUnion
 from sklearn.preprocessing import StandardScaler
 from sklearn.cross_validation import train_test_split
 
-
+import zillow.src.config.config as mdl_cfg
 
 print( "\nReading data from disk ...")
-train=pd.read_csv('C:/Users/Lenovo/Downloads/all/train_2016_v2.csv',parse_dates=['transactiondate'])
+train=pd.read_csv(mdl_cfg.INPUT_DATA_PATH, parse_dates=['transactiondate'])
 properties=pd.read_csv('C:/Users/Lenovo/Downloads/all/properties_2016.csv')
 sample=pd.read_csv('C:/Users/Lenovo/Downloads/all/sample_submission.csv')
 
